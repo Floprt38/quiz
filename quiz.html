@@ -1,0 +1,143 @@
+DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interactif UE 2.6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz Interactif : UE 2.6</h1>
+
+    <form id="quiz-form">
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. Quelle est la caractéristique principale d’un trouble de la personnalité ?</h3>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> Rigidité des traits entraînant des altérations fonctionnelles</label>
+                <label><input type="radio" name="q1" value="b"> Absence de symptômes psychotiques</label>
+                <label><input type="radio" name="q1" value="c"> Continuité avec l’état antérieur</label>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Associez chaque type de personnalité à son cluster :</h3>
+            <p>Paranoïa :</p>
+            <select name="q2a">
+                <option value="">-- Choisir --</option>
+                <option value="Cluster A">Cluster A</option>
+                <option value="Cluster B">Cluster B</option>
+                <option value="Cluster C">Cluster C</option>
+            </select>
+            <p>Histrionique :</p>
+            <select name="q2b">
+                <option value="">-- Choisir --</option>
+                <option value="Cluster A">Cluster A</option>
+                <option value="Cluster B">Cluster B</option>
+                <option value="Cluster C">Cluster C</option>
+            </select>
+            <p>Évitante :</p>
+            <select name="q2c">
+                <option value="">-- Choisir --</option>
+                <option value="Cluster A">Cluster A</option>
+                <option value="Cluster B">Cluster B</option>
+                <option value="Cluster C">Cluster C</option>
+            </select>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Citez deux troubles neuro-développementaux identifiés :</h3>
+            <input type="text" name="q3" placeholder="Votre réponse">
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. Les comportements répétitifs sont-ils un critère diagnostique des troubles du spectre de l’autisme ?</h3>
+            <div class="options">
+                <label><input type="radio" name="q4" value="vrai"> VRAI</label>
+                <label><input type="radio" name="q4" value="faux"> FAUX</label>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. Quelles sont les causes principales d’un comportement addictif ?</h3>
+            <div class="options">
+                <label><input type="checkbox" name="q5" value="traumatismes"> Traumatismes</label>
+                <label><input type="checkbox" name="q5" value="hypersensibilite"> Hypersensibilité</label>
+                <label><input type="checkbox" name="q5" value="relation_dependance"> Relation de dépendance familiale</label>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. Quel est le risque majeur d’un sevrage alcoolique ?</h3>
+            <input type="text" name="q6" placeholder="Votre réponse">
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. Quels sont deux symptômes spécifiques de la dépression chez les adolescents ?</h3>
+            <input type="text" name="q7" placeholder="Votre réponse">
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. Quel est le rôle principal des infirmiers pour les adolescents suicidaires ?</h3>
+            <input type="text" name="q8" placeholder="Votre réponse">
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. Citez les trois critères diagnostiques de l’anorexie mentale :</h3>
+            <input type="text" name="q9" placeholder="Votre réponse">
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. L’âge moyen de début de l’anorexie est-il de 10 ans ?</h3>
+            <div class="options">
+                <label><input type="radio" name="q10" value="vrai"> VRAI</label>
+                <label><input type="radio" name="q10" value="faux"> FAUX</label>
+            </div>
+        </div>
+
+        <button type="submit">Valider</button>
+    </form>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Votre quiz a été soumis ! Les réponses seront bientôt corrigées.');
+        });
+    </script>
+</body>
+</html>
